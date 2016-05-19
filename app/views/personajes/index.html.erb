@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+  <div class="container">
+    <h1>Listado de personajes</h1>
+    <%= link_to 'Nuevo Personaje', new_personaje_path %>
+    
+    <table class="table table hover">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Sexo</th>
+          <th>Seiyu</th>
+          <th>Funcionalidad</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @personajes.each do |personaje| %>
+          <tr>
+            <td><%= personaje.nombre %></td>
+            <td><%= personaje.sexo %></td>
+            <td><%= personaje.seiyu %></td>
+            <td><%= link_to 'Editar', edit_personaje_path(personaje) %></td>
+            <td><%= link_to 'Eliminar', personaje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

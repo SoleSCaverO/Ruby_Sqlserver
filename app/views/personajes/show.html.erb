@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @personaje.nombre %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @personaje.sexo %>
+</p>
+
+<p>
+  <strong>Seiyu:</strong>
+  <%= @personaje.seiyu %>
+</p>
+
+<%= link_to 'Edit', edit_personaje_path(@personaje) %> |
+<%= link_to 'Back', personajes_path %>
